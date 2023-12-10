@@ -26,6 +26,18 @@ Window {
         function onControlPointMoved(){
             image.reload()
         }
+        function onBorderPointsShowed() {
+            image.reload()
+        }
+        function onBorderPointsHiden() {
+            image.reload()
+        }
+        function onBackgroundShowed() {
+            image.reload()
+        }
+        function onBackgroundHiden() {
+            image.reload()
+        }
     }
     GridLayout{
         id: mainGrid
@@ -39,12 +51,163 @@ Window {
             Layout.fillHeight : true
             Layout.fillWidth : true
             color: "lavender"
+            Text{
+                x: 10
+                y: 25
+                text: "1.8"
+            }
+            Text{
+                x: 10
+                y: 75
+                text: "1.6"
+            }
+            Text{
+                x: 10
+                y: 128
+                text: "1.4"
+            }
+            Text{
+                x: 10
+                y: 180
+                text: "1.2"
+            }
+            Text{
+                x: 10
+                y: 233
+                text: "1.0"
+            }
+            Text{
+                x: 10
+                y: 286
+                text: "0.8"
+            }
+            Text{
+                x: 10
+                y: 343
+                text: "0.6"
+            }
+            Text{
+                x: 10
+                y: 402
+                text: "0.4"
+            }
+            Text{
+                x: 10
+                y: 455
+                text: "0.2"
+            }
+            Text{
+                x: 10
+                y: 497
+                text: "0.0"
+            }
+            Text{
+                x: 30
+                y: 510
+                text: "380"
+            }
+            Text{
+                x: 80
+                y: 510
+                text: "430"
+            }
+            Text{
+                x: 140
+                y: 510
+                text: "480"
+            }
+            Text{
+                x: 200
+                y: 510
+                text: "530"
+            }
+            Text{
+                x: 260
+                y: 510
+                text: "580"
+            }
+            Text{
+                x: 320
+                y: 510
+                text: "630"
+            }
+            Text{
+                x: 380
+                y: 510
+                text: "680"
+            }
+            Text{
+                x: 440
+                y: 510
+                text: "730"
+            }
+            Text{
+                x: 500
+                y: 510
+                text: "780"
+            }
             Rectangle{
                 x: 30
                 y: 30
                 width: 480
                 height: 480
                 color: "lavenderblush"
+                Rectangle {
+                    // on x coords 430
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    x: 60
+                    y: 470
+                }
+                Rectangle {
+                    // on x coords 480
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    x: 120
+                    y: 470
+                }
+                Rectangle {
+                    // on x coords 530
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    x: 180
+                    y: 470
+                }
+                Rectangle {
+                    // on x coords 580
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    anchors.bottom: parent.bottom
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
+                Rectangle {
+                    // on x coords 630
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    x: 300
+                    y: 470
+                }
+                Rectangle {
+                    // on x coords 680
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    x: 360
+                    y: 470
+                }
+                Rectangle {
+                    // on x coords 620
+                    width: 1
+                    height: 10
+                    color: "dimgray"
+                    x: 420
+                    y: 470
+                }
                 Rectangle {
                     // x axis 
                     width: parent.width
@@ -60,6 +223,70 @@ Window {
                     color: "dimgray"
                     anchors.left: parent.left
                     anchors.verticalCenter: parent.verticalCenter
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 53
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 107
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 160
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 213
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 267
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 320
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 383
+                }
+                Rectangle {
+                    // on y coords 
+                    width: 10
+                    height: 1
+                    color: "dimgray"
+                    x: 0
+                    y: 432
                 }
                 // Circle 1
                  Rectangle {
@@ -187,16 +414,50 @@ Window {
                 }
             }
             
+            
         }
         Rectangle {
             Layout.column : 1
             Layout.row : 0
-            Layout.fillHeight : true
-            Layout.fillWidth : true
+            //Layout.fillHeight : true
+            //Layout.fillWidth : true
+            x: 500
+            y: 0
+            width: 540
+            //height: 540
             height: mainWindow.height
             color: "lavender"
-            enabled: false
-            
+            //enabled: false
+
+            CheckBox{
+                    enabled: true
+                    x: 20
+                    y: 540
+                    checked: true
+                    text: qsTr("Points")
+                    onCheckedChanged : {
+                        if (checked) {
+                            windowController.showBorderPoints() 
+                        } else {
+                            windowController.hideBorderPoints()
+                        }
+                    }
+             }
+             CheckBox{
+                    enabled: true
+                    x: 100
+                    y: 540
+                    checked: true
+                    text: qsTr("Background")
+                    onCheckedChanged : {
+                        if (checked) {
+                            windowController.showBackground() 
+                        } else {
+                            windowController.hideBackground()
+                        }
+                    }
+             }
+
             Image {
                 id : image
                 x : 5
@@ -215,13 +476,7 @@ Window {
                 }
             } 
             
-                CheckBox{
-                    enabled: true
-                    x: 270
-                    y: 540
-                    //checked: true
-                    text: qsTr("Points")
-                }
+                
             
         }
     }

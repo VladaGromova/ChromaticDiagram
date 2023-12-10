@@ -39,5 +39,4 @@
 
    QString qstr = QString::fromStdString(concatenatedString); 
    setPath(qstr);
-   //emit pathChanged();
  }
